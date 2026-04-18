@@ -1,0 +1,11 @@
+torch
+torchaudio
+transformers
+openai-whisper
+pyannote.audio
+jiwer
+librosa
+datasets
+soundfile
+matplotlib
+streamlit
