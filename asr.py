@@ -54,6 +54,7 @@ def transcribe_segments(audio_path: str, segments: List[Dict], apply_denoise: bo
                     fp16=(DEVICE == "cuda"),
                     verbose=False,
                     task="transcribe",
+                    language="en"
                 )
                 text = out.get("text", "").strip()
                 confidence = _extract_asr_confidence(out)

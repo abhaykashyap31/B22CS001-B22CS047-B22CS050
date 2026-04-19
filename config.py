@@ -1,4 +1,7 @@
-import torch
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 SAMPLE_RATE = 16000
 # Keep the Python modules CPU-friendly by default.
@@ -6,4 +9,5 @@ SAMPLE_RATE = 16000
 DEVICE = "cpu"
 WHISPER_MODEL = "small"
 OUTPUT_DIR = "outputs/"
-HF_TOKEN = ""  # user can optionally add HuggingFace token for pyannote
+HF_TOKEN = os.getenv('HF_TOKEN', '')  # Load from .env file
+

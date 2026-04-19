@@ -9,3 +9,5 @@ datasets
 soundfile
 matplotlib
 streamlit
+torchvision
+python-dotenv

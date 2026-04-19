@@ -1,0 +1,17 @@
+{
+  "wer": 0.3630,
+  "der_approx": 0.3891,
+  "speaker_accuracy": 0.6056,
+  "audio_duration_s": 6001.94,
+  "rtf": 0.7614,
+  "timings_s": {
+    "ami_subset_download": 6.62,
+    "model_load": 59.43,
+    "speaker_attribution_setup": 1.64,
+    "segment_asr_and_attribution": 4570.20,
+    "total": 4637.89
+  },
+  "attribution_method": "mlp",
+  "denoise_enabled": false,
+  "whisper_model": "small"
+}

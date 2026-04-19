@@ -1,0 +1,37 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.env
+
+# Jupyter notebooks and results
+notebook_results.txt
+
+# LaTeX and report build artifacts
+*.aux
+*.log
+*.brf
+*.blg
+*.bbl
+*.out
+*.pdf
+*.sty
+report.tex
+
+# Bibliography files
+*.bib
+
+# Project docs and planning notes
+complete_plan.md
+overall.md
+possible.md
+project_doc.txt
+
+# Editor and OS files
+*.swp
+*~
+.DS_Store

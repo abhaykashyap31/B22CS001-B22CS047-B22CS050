@@ -42,6 +42,9 @@ def main() -> None:
         audio_path = save_uploaded_audio(uploaded_audio)
         st.success(f"Saved uploaded file to `{audio_path}`")
 
+        # Add audio player
+        st.audio(uploaded_audio, format="audio/wav")
+
         if st.button("Run diarization & transcription"):
             with st.spinner("Running pipeline..."):
                 results, timings = run_pipeline_with_timing(audio_path, hf_token=hf_token)

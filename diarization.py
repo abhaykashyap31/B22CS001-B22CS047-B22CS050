@@ -13,7 +13,7 @@ def _get_pipeline(hf_token: Optional[str] = None) -> Pipeline:
         token = hf_token if hf_token else HF_TOKEN
         _DIARIZATION_PIPELINE = Pipeline.from_pretrained(
             "pyannote/speaker-diarization-3.1",
-            use_auth_token=token if token else None,
+            token=token if token else None,
         )
     return _DIARIZATION_PIPELINE
 
@@ -55,7 +55,7 @@ def run_diarization(audio_path: str, hf_token: Optional[str] = None) -> List[Dic
     speaker_id = 1
     segments: List[Dict] = []
 
-    for turn, _, speaker in diarization.itertracks(yield_label=True):
+    for turn, _, speaker in diarization.speaker_diarization.itertracks(yield_label=True):
         if speaker not in speaker_map:
             speaker_map[speaker] = f"SPEAKER_{speaker_id}"
             speaker_id += 1
